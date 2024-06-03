@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: min(576px, 100%);
+  height: min(1024px, 100vh);
+  margin: 0 auto;
+  background-color: black;
+
+  @media (max-width: 576px) {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+}
