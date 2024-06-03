@@ -1,0 +1,24 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  justify-content: end;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media (max-width: 576px) {
+  img {
+    width: 20%;
+  }
+  span {
+    font-size: 1.3rem;
+    color: red;
+    display: flex;
+    align-items: center;
+  }
+}
