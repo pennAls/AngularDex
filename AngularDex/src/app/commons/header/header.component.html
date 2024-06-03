@@ -1,1 +1,65 @@
-<p>header works!</p>
+<mat-toolbar class="d-flex">
+  <button
+    (click)="toggleOptions()"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span class="d-flex align-items-center">
+    <img
+      src="../../../assets/imgs/Angular_Logo_SVG.svg-removebg-preview.png"
+      alt="AngularDex"
+      class="ms-3"
+    />Dex
+
+    <img
+      src="../../../assets/imgs/pokeball.png"
+      alt="AngularDex"
+      class="pokeball"
+    />
+
+    <img
+      class="pokemons"
+      src="../../../assets/imgs/hero-img.png"
+      alt="AngularDex"
+      class="pokemons"
+    />
+  </span>
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon class="ms-2">home</mat-icon>
+  </button>
+</mat-toolbar>
+@if (optionsOpen) {
+<mat-list>
+  <mat-list-item>
+    <div class="optionsList">
+    <img
+      class="pokemenu"
+      src="../../../assets/imgs/pokeballmenu.png"
+      alt="AngularDex"
+    />
+    <p>Pesquisar</p>
+</div>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>
+    <div class="optionsList">
+    <img
+      class="pokemenu"
+      src="../../../assets/imgs/pokeballmenu.png"
+      alt="AngularDex"
+    />
+    <p>PokeDex</p>
+</div>
+  </mat-list-item>
+</mat-list>
+
+}

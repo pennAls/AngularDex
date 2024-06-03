@@ -1,0 +1,49 @@
+@media (max-width: 576px) {
+  img {
+    width: 70%;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  span {
+    font-size: 2rem;
+    color: red;
+  }
+  mat-toolbar {
+    background-color: white;
+    width: 100%;
+    height: 5.3rem;
+    border-bottom: 3px solid red;
+  }
+  .pokeball {
+    display: none;
+  }
+  .pokemons {
+    display: none;
+  }
+  .optionsList {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    flex-wrap: nowrap;
+    font-family: "Poetsen One", sans-serif;
+    color: red;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 5px solid black;
+
+  }
+  mat-list {
+    background-color: white;
+  }
+  
+  .pokemenu {
+    width: 80px;
+    display: flex;
+    margin: 3px;
+  }
+}
