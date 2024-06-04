@@ -6,7 +6,7 @@
     flex: 1 1 auto;
   }
   span {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: red;
   }
   mat-toolbar {
@@ -35,12 +35,12 @@
     padding-bottom: 5px;
     padding-top: 5px;
     border-bottom: 5px solid black;
-
   }
   mat-list {
     background-color: white;
+    
   }
-  
+
   .pokemenu {
     width: 80px;
     display: flex;
