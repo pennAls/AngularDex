@@ -2,11 +2,12 @@ import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SearchPokemonComponent } from './modules/pokedex/components/search-pokemon/search-pokemon.component';
 import { PokedexComponent } from './modules/pokedex/pokedex.component';
+import { PosterComponent } from './commons/poster/poster.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: '/AngularDex',
+    redirectTo: '/AngularDex/menu',
     pathMatch: 'full',
   },
 
@@ -15,7 +16,11 @@ export const routes: Routes = [
     component: PokedexComponent,
     children: [
       {
-        path: 'Search-Pokemon',
+        path: 'menu',
+        component: PosterComponent,
+      },
+      {
+        path: 'search-pokemon',
         component: SearchPokemonComponent,
       },
     ],
@@ -23,7 +28,7 @@ export const routes: Routes = [
 
   {
     path: '**',
-    redirectTo: '/AngularDex',
+    redirectTo: '/AngularDex/menu',
     pathMatch: 'full',
   },
 ];
