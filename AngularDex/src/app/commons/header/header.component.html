@@ -30,6 +30,7 @@
   </span>
   <span class="example-spacer"></span>
   <button
+    (click)="redirectToHome();"
     mat-icon-button
     class="example-icon favorite-icon"
     aria-label="Example icon-button with heart icon"
@@ -39,7 +40,7 @@
 </mat-toolbar>
 @if (optionsOpen) {
 <mat-list>
-  <div class="optionsList" (click)="goToSearch()">
+  <div class="optionsList" (click)="redirectToSearch()">
     <img
       class="pokemenu"
       src="../../../assets/imgs/pokeballmenu.png"

@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+
+import { PosterComponent } from '../../commons/poster/poster.component';
+import { RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-pokedex',
   standalone: true,
-  imports: [RouterOutlet,RouterLink],
+
+  imports: [PosterComponent,RouterOutlet],
+
+
   templateUrl: './pokedex.component.html',
   styleUrl: './pokedex.component.css'
 })
