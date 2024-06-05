@@ -1,0 +1,60 @@
+nav {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+form {
+  width: 100%;
+}
+
+::placeholder {
+  text-align: center;
+  font-family: "Poetsen One", sans-serif;
+  color: black;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.lupa {
+  width: 10%;
+  display: flex;
+  margin-left: 20px;
+}
+
+.pokenavbar {
+  width: 10%;
+  margin-right: 20px;
+}
+
+.optionsList {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 2px;
+  gap: 10px;
+  font-family: "Poetsen One", sans-serif;
+  color: black;
+  width: 100%;
+  border: solid red;
+}
+
+.pokemonphoto{
+    width: 30%;
+}
+
+mat-list {
+  background-color: white;
+  height: auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

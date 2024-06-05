@@ -1,1 +1,33 @@
-<p>search-pokemon works!</p>
+
+<nav class="navbar navbar-light bg-light">
+  <form [formGroup]="searchform" class="form-inline">
+    <div class="search">
+      <img
+        class="lupa"
+        src="../../../../../assets/imgs/lupapesquisa-removebg-preview.png"
+        alt="searchicon"
+      />
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Pesquisar Pokemon"
+        aria-label="Pesquisar"
+        formControlName="search"
+      />
+      <img
+        class="pokenavbar"
+        src="../../../../../assets/imgs/Poke_Ball.webp"
+        alt="pokenavbar"
+      />
+    </div>
+  </form>
+</nav>
+<br>
+@for (pokemon of pokemonsnav; track pokemon) {
+
+<div class="optionsList">
+  <img class="pokemonphoto" [src]="pokemon.sprites['front_default']" />
+  <p>{{ pokemon.name }}</p>
+</div>
+
+}
