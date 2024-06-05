@@ -4,28 +4,25 @@ import { SearchPokemonComponent } from './modules/pokedex/components/search-poke
 import { PokedexComponent } from './modules/pokedex/pokedex.component';
 import { PosterComponent } from './commons/poster/poster.component';
 
-export const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/AngularDex/menu',
-    pathMatch: 'full',
-  },
 
+
+export const routes: Routes = [
   {
     path: 'AngularDex',
     component: PokedexComponent,
     children: [
       {
+
         path: 'menu',
         component: PosterComponent,
       },
       {
+
         path: 'search-pokemon',
         component: SearchPokemonComponent,
       },
     ],
   },
-
   {
     path: '**',
     redirectTo: '/AngularDex/menu',
