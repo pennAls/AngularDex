@@ -39,27 +39,24 @@
 </mat-toolbar>
 @if (optionsOpen) {
 <mat-list>
-  <mat-list-item>
-    <div class="optionsList" (click)="goToSearch()">
-      <img
-        class="pokemenu"
-        src="../../../assets/imgs/pokeballmenu.png"
-        alt="AngularDex"
-      />
-      <p>Pesquisar</p>
-    </div>
-  </mat-list-item>
+  <div class="optionsList" (click)="goToSearch()">
+    <img
+      class="pokemenu"
+      src="../../../assets/imgs/pokeballmenu.png"
+      alt="AngularDex"
+    />
+    <p>Pesquisar</p>
+  </div>
+  <mat-divider></mat-divider>
 
-  <mat-list-item>
-    <div class="optionsList">
-      <img
-        class="pokemenu"
-        src="../../../assets/imgs/pokeballmenu.png"
-        alt="AngularDex"
-      />
-      <p>PokeDex</p>
-    </div>
-  </mat-list-item>
+  <div class="optionsList">
+    <img
+      class="pokemenu"
+      src="../../../assets/imgs/pokeballmenu.png"
+      alt="AngularDex"
+    />
+    <p>PokeDex</p>
+  </div>
 </mat-list>
 
 }

@@ -13,7 +13,7 @@
     background-color: white;
     width: 100%;
     height: 5.3rem;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid  red
   }
   .pokeball {
     display: none;
@@ -27,23 +27,29 @@
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    gap: 15px;
-    font-size: 1.5rem;
-    flex-wrap: nowrap;
+    font-size: 1.7rem;
+    gap: 20px;
     font-family: "Poetsen One", sans-serif;
     color: red;
-    padding-bottom: 5px;
+    width: 100%;
     padding-top: 5px;
-    border-bottom: 5px solid black;
+    padding-bottom: 5px;
+    
+    
   }
   mat-list {
     background-color: white;
-    
+    height: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  mat-divider {
+    background-color: black;
+    height: 5px;
   }
 
   .pokemenu {
     width: 80px;
-    display: flex;
-    margin: 3px;
+    margin-left: 10px;
   }
 }
