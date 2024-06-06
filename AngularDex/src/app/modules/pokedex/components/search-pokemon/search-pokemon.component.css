@@ -53,14 +53,13 @@ form {
   font-size: 2rem;
   width: 90%;
   background-color: burlywood;
-  border: solid white;
   border-radius: 10px;
   margin: auto;
+  border: solid 5px;
 }
 
-
 .pokemonphoto {
-  width: 60%;
+  width: 50%;
 }
 
 .pokeinfo {

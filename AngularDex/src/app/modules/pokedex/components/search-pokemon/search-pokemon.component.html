@@ -25,7 +25,10 @@
 
 @for (pokemon of pokemonsnav; track pokemon) {
 
-<div class="optionsList">
+<div
+  class="optionsList"
+  [ngStyle]="{ 'border-color': getBorderColor(pokemon.types) }"
+>
   <div class="pokename">
     <p>{{ pokemon.name }}</p>
   </div>
