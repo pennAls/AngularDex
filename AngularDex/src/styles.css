@@ -10,5 +10,7 @@ body {
 }
 
 body {
- background-color: black;
+ background-image: url(https://i.pinimg.com/originals/4f/17/41/4f1741af1279795e18fea833fb23641c.png);
+ background-size: cover;
+ background-position: center;
 }

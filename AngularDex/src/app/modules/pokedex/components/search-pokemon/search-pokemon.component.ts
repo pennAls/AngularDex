@@ -37,7 +37,7 @@ export class SearchPokemonComponent implements OnInit {
     });
   }
 
-  private getPokemonsNav(name: string): void {
+  getPokemonsNav(name: string): void {
     this.pokeApiService
       .getPokemonNav(name)
       .pipe(
@@ -58,10 +58,11 @@ export class SearchPokemonComponent implements OnInit {
         },
       });
   }
+  
   getTypeImageUrl(typeName: string): string {
     return this.pokeApiService.pokemonType[typeName] || '';
   }
-  
+
   getBorderColor(types: { type: { name: string } }[]): string {
     if (types && types.length > 0) {
       return this.pokeApiService.getTypeColor(types[0].type.name);
