@@ -8,7 +8,7 @@ import { MatListModule } from '@angular/material/list';
 @Component({
   selector: 'app-search-pokemon',
   standalone: true,
-  imports: [ReactiveFormsModule,MatListModule],
+  imports: [ReactiveFormsModule, MatListModule],
   templateUrl: './search-pokemon.component.html',
   styleUrl: './search-pokemon.component.css',
 })
@@ -44,7 +44,7 @@ export class SearchPokemonComponent implements OnInit {
           return {
             name: response.name,
             sprites: response.sprites,
-            type: response.type,
+            types: response.types,
           };
         })
       )
@@ -56,5 +56,8 @@ export class SearchPokemonComponent implements OnInit {
           console.log(err);
         },
       });
+  }
+  getTypeImageUrl(typeName: string): string {
+    return this.pokeApiService.pokemonType[typeName] || '';
   }
 }
