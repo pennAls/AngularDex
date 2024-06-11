@@ -24,7 +24,7 @@
 <br />
 <br />
 <br />
-@for (pokemon of pokemonsnav; track pokemon) {
+@for (pokemon of pokemonsnav; track pokemon) { @if(isDivOpen){
 <div
   class="optionsList"
   [ngStyle]="{ 'border-color': getBorderColor(pokemon.types) }"
@@ -42,4 +42,4 @@
     }
   </div>
 </div>
-}
+} }

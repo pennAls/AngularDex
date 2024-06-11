@@ -10,13 +10,20 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-search-pokemon',
   standalone: true,
-  imports: [ReactiveFormsModule, MatListModule, CommonModule, RouterLink,RouterOutlet],
+  imports: [
+    ReactiveFormsModule,
+    MatListModule,
+    CommonModule,
+    RouterLink,
+    RouterOutlet,
+  ],
   templateUrl: './search-pokemon.component.html',
   styleUrl: './search-pokemon.component.css',
 })
 export class SearchPokemonComponent implements OnInit {
   pokemonsnav?: pokemonNav[] = [];
   searchform!: FormGroup;
+  isDivOpen: boolean = false;
 
   ngOnInit(): void {
     this.buildform();
@@ -33,8 +40,12 @@ export class SearchPokemonComponent implements OnInit {
 
   observeNav(): void {
     this.searchform.controls['search'].valueChanges.subscribe((value) => {
-      console.log(value);
-      this.getPokemonsNav(value);
+      if (value.trim() === '') {
+        this.isDivOpen = false;
+        this.pokemonsnav = [];
+      } else {
+        this.getPokemonsNav(value);
+      }
     });
   }
 
@@ -53,9 +64,11 @@ export class SearchPokemonComponent implements OnInit {
       .subscribe({
         next: (filteredResponse: pokemonNav) => {
           this.pokemonsnav = [filteredResponse];
+          this.isDivOpen = true;
         },
         error: (err) => {
           console.log(err);
+          this.isDivOpen = false;
         },
       });
   }
