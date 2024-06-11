@@ -68,7 +68,6 @@ export class SearchPokemonComponent implements OnInit {
         },
         error: (err) => {
           console.log(err);
-          this.isDivOpen = false;
         },
       });
   }
