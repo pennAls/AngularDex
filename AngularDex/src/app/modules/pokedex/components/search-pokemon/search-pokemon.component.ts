@@ -5,11 +5,12 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { map } from 'rxjs/operators';
 import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-search-pokemon',
   standalone: true,
-  imports: [ReactiveFormsModule, MatListModule,CommonModule],
+  imports: [ReactiveFormsModule, MatListModule, CommonModule, RouterLink,RouterOutlet],
   templateUrl: './search-pokemon.component.html',
   styleUrl: './search-pokemon.component.css',
 })
@@ -28,9 +29,9 @@ export class SearchPokemonComponent implements OnInit {
     });
   }
 
-  constructor(private pokeApiService: PokeapiService) {}
+  constructor(private pokeApiService: PokeapiService, private router: Router) {}
 
-  private observeNav(): void {
+  observeNav(): void {
     this.searchform.controls['search'].valueChanges.subscribe((value) => {
       console.log(value);
       this.getPokemonsNav(value);
@@ -58,7 +59,7 @@ export class SearchPokemonComponent implements OnInit {
         },
       });
   }
-  
+
   getTypeImageUrl(typeName: string): string {
     return this.pokeApiService.pokemonType[typeName] || '';
   }
@@ -67,6 +68,9 @@ export class SearchPokemonComponent implements OnInit {
     if (types && types.length > 0) {
       return this.pokeApiService.getTypeColor(types[0].type.name);
     }
-    return '#000000'; 
+    return '#000000';
+  }
+  goToPokemon(pokemonName: string): void {
+    this.router.navigate([`/AngularDex/search-pokemon/${pokemonName}`]);
   }
 }

@@ -20,7 +20,6 @@ form {
   justify-content: center;
   align-items: center;
   gap: 30px;
- 
 }
 
 .lupa {
@@ -35,14 +34,13 @@ form {
 }
 
 .pokename {
-  color:white;
+  color: white;
   font-size: 2rem;
   justify-content: center;
   margin: auto;
   font-family: "Press Start 2P", system-ui;
   font-weight: 350;
   font-style: normal;
-
 }
 
 .optionsList {
@@ -60,6 +58,14 @@ form {
 
 .pokemonphoto {
   width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
 }
 
 .pokeinfo {
